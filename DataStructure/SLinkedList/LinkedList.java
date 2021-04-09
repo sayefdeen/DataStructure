@@ -32,12 +32,38 @@ public class LinkedList<T> {
         }
     }
 
-    public void insertHead(Node<T> node) {
+    // insert At head
+
+    public void insert(T node) {
+        Node<T> newNode = new Node<T>(node);
         if (head == null) {
-            head = node;
+            head = newNode;
         } else {
-            node.setNext(head);
-            head = node;
+            newNode.setNext(head);
+            head = newNode;
+        }
+    }
+    // Insert at a position
+
+    public void insert(T node, int position) {
+        Node<T> newNode = new Node<T>(node);
+        if (head == null) {
+            head = newNode;
+        } else if (position == 0) {
+            newNode.setNext(head);
+            head = newNode;
+        } else {
+            int counter = 0;
+            Node<T> current = head;
+            while (current.getNext() != null) {
+                counter++;
+                if (counter == position) {
+                    newNode.setNext(current.getNext());
+                    current.setNext(newNode);
+                    break;
+                }
+                current = current.getNext();
+            }
         }
     }
 
@@ -91,6 +117,38 @@ public class LinkedList<T> {
             }
             throw new Exception(position + " was Not Found");
         }
+    }
+
+    // The Runner technique
+
+    public boolean hasCycle(Node<T> node) {
+        if (head == null) {
+            return false;
+        }
+        Node<T> fast = head.getNext();
+        Node<T> slow = head;
+        while (fast != null && fast.getNext() != null && slow != null) {
+            if (fast == slow) {
+                return true;
+            }
+            fast = fast.getNext().getNext();
+            slow = slow.getNext();
+        }
+        return false;
+    }
+
+    public void inverse() {
+        Node<T> prev = null;
+        Node<T> current = head;
+        Node<T> next = null;
+
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(prev);
+            prev = current;
+            current = next;
+        }
+        head = prev;
     }
 
 }
