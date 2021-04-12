@@ -19,3 +19,9 @@
 5. position(T) : int : This method will return an integer that represent the key position in the linkedList
 
 6. deleteNode(int) : This method will delete a node according to the passed position
+
+7. hasCycle(Node) : boolean : This method will test if we have an infinite loop in the LinkedList
+
+8. inverse() : This method will reverse the linkedList using iteration
+
+9. recursionInverse(Node next,Node current ,Node prev) : This method is a recursive method, that will inverse the LinkedList

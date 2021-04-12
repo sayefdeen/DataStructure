@@ -4,7 +4,7 @@ public class Main {
         ll.addNode(new Node<String>("Saif"));
         ll.addNode(new Node<String>("Saif1"));
         System.out.println(ll.printList());
-        ll.inverse();
+        ll.recursionInverse(null, ll.getHead(), null);
         System.out.println(ll.printList());
     }
 }

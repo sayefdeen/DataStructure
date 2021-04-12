@@ -5,6 +5,10 @@ public class LinkedList<T> {
 
     private Node<T> head;
 
+    public Node<T> getHead() {
+        return head;
+    }
+
     public void addNode(Node<T> node) {
         if (head == null) {
             head = node;
@@ -149,6 +153,22 @@ public class LinkedList<T> {
             current = next;
         }
         head = prev;
+    }
+
+    // Reverse using recursion
+    // 0 -- next
+    // 1 -- current
+    // 2 -- prev
+    public void recursionInverse(Node<T> next, Node<T> current, Node<T> prev) {
+        if (current == null) {
+            head = prev;
+            return;
+        }
+        next = current.getNext();
+        current.setNext(prev);
+        prev = current;
+        current = next;
+        recursionInverse(next, current, prev);
     }
 
 }
