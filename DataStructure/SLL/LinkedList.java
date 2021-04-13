@@ -1,4 +1,6 @@
-import jdk.javadoc.internal.doclets.formats.html.resources.standard;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * LinkedList
@@ -11,15 +13,16 @@ public class LinkedList<T> {
         return head;
     }
 
-    public void addNode(Node<T> node) {
+    public void addNode(T node) {
+        Node<T> newNode = new Node<>(node);
         if (head == null) {
-            head = node;
+            head = newNode;
         } else {
             Node<T> current = head;
             while (current.getNext() != null) {
                 current = current.getNext();
             }
-            current.setNext(node);
+            current.setNext(newNode);
         }
     }
 
@@ -30,7 +33,7 @@ public class LinkedList<T> {
             StringBuilder sb = new StringBuilder();
             Node<T> current = head;
             while (current != null) {
-                sb.append(current.getValue() + " --> ");
+                sb.append(current.getData()).append(" --> ");
                 current = current.getNext();
             }
             sb.append("Null");
@@ -79,7 +82,7 @@ public class LinkedList<T> {
         } else {
             Node<T> current = head;
             while (current != null) {
-                if (current.getValue() == key) {
+                if (current.getData() == key) {
                     return true;
                 }
                 current = current.getNext();
@@ -95,7 +98,7 @@ public class LinkedList<T> {
             int counter = 0;
             Node<T> current = head;
             while (current != null) {
-                if (current.getValue() == key) {
+                if (current.getData() == key) {
                     return counter;
                 }
                 counter++;
@@ -173,9 +176,20 @@ public class LinkedList<T> {
         recursionInverse(next, current, prev);
     }
 
-    // Remove Duplicated Nodes
-    public void removeDuplicated(LinkedList<T> sll) {
-
+    public LinkedList<T> removeDublicates(){
+        LinkedList<T> ll = new LinkedList<>();
+        ll.head = this.head;
+        HashSet<T> set = new HashSet<>();
+        Node<T> current = ll.head;
+        while (current != null){
+            set.add(current.getData());
+            current = current.getNext();
+        }
+        ll.head = null;
+        ArrayList<T> array = new ArrayList<>(set);
+        for (int i = array.size()-1; i >=0 ; i--) {
+            ll.addNode(array.get(i));
+        }
+        return ll;
     }
-
 }

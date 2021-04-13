@@ -2,26 +2,26 @@
  * Node
  */
 public class Node<T> {
-    private T value;
+    private T data;
     private Node<T> next;
 
-    public Node(T value) {
-        this.value = value;
+    public Node(T data) {
+        this.data = data;
         next = null;
     }
 
     // Setters and Getters
 
-    public T getValue() {
-        return value;
+    public T getData() {
+        return data;
     }
 
     public Node<T> getNext() {
         return next;
     }
 
-    public void setValue(T newValue) {
-        this.value = newValue;
+    public void setData(T newdata) {
+        this.data = newdata;
     }
 
     public void setNext(Node<T> newNode) {
@@ -30,7 +30,7 @@ public class Node<T> {
 
     @Override
     public String toString() {
-        return "Node{" + "value=" + value + ", next=" + next + '}';
+        return "Node{" + "data=" + data + ", next=" + next + '}';
 
     }
 }

@@ -1,10 +1,13 @@
 public class Main {
     public static void main(String[] args) {
         LinkedList<String> ll = new LinkedList<>();
-        ll.addNode(new Node<String>("Saif"));
-        ll.addNode(new Node<String>("Saif1"));
+        ll.addNode("Saif");
+        ll.addNode("Saif1");
+        ll.addNode("Saif1");
+        ll.addNode("Saif1");
+        ll.addNode("Saif");
         System.out.println(ll.printList());
-        ll.recursionInverse(null, ll.getHead(), null);
-        System.out.println(ll.printList());
+        LinkedList<String> ll2 = ll.removeDublicates();
+        System.out.println(ll2.printList());
     }
 }
