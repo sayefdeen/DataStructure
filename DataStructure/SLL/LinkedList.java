@@ -1,3 +1,5 @@
+import jdk.javadoc.internal.doclets.formats.html.resources.standard;
+
 /**
  * LinkedList
  */
@@ -169,6 +171,11 @@ public class LinkedList<T> {
         prev = current;
         current = next;
         recursionInverse(next, current, prev);
+    }
+
+    // Remove Duplicated Nodes
+    public void removeDuplicated(LinkedList<T> sll) {
+
     }
 
 }
