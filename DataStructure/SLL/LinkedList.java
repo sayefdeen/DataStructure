@@ -176,7 +176,8 @@ public class LinkedList<T> {
         recursionInverse(next, current, prev);
     }
 
-    public LinkedList<T> removeDublicates(){
+    // remove duplicates
+    public LinkedList<T> removeDuplicates(){
         LinkedList<T> ll = new LinkedList<>();
         ll.head = this.head;
         HashSet<T> set = new HashSet<>();
@@ -192,4 +193,28 @@ public class LinkedList<T> {
         }
         return ll;
     }
+
+    public void removeDuplicatesSame(){
+        if (head == null) return;
+        Node<T> previous = head;
+        Node<T> current = previous.getNext();
+        while (current != null){
+            Node<T> runner = head;
+            while (runner != current){
+                if(runner.getData() == current.getData()){
+                    Node<T> temp = current.getNext();
+                    previous.setNext(temp);
+                    current = temp;
+                    break;
+                }
+                runner = runner.getNext();
+            }
+            if(runner == current){
+                previous = current;
+                current = current.getNext();
+            }
+        }
+
+    }
+
 }
