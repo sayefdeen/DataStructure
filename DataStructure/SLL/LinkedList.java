@@ -217,4 +217,36 @@ public class LinkedList<T> {
 
     }
 
+    // The LL should be sorted to invoke this method
+    // assuming the linkedList is sorted
+    // the solution is correct, just change the if statment to handle your case
+    // not the optimal solution since I am  using generics
+
+    public void insertNOrder(T data) throws Exception{
+        Node<T> newNode = new Node<>(data);
+        if(head == null) {
+            throw  new Exception("The LinkedList is Empty");
+        }else if(head.compareTo(data) < 0){
+            newNode.setNext(head);
+            head = newNode;
+        }
+        else{
+            Node<T> current = head;
+            Node<T> next = head.getNext();
+
+            while (next != null && current != null ){
+                if(current.compareTo(data) >= 0 && next.compareTo(data) <0){
+                    newNode.setNext(next);
+                    current.setNext(newNode);
+                    break;
+                }
+                current = current.getNext();
+                next = next.getNext();
+            }
+            if(next == null){
+                current.setNext(newNode);
+            }
+        }
+
+    }
 }

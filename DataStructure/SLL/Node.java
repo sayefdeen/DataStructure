@@ -1,7 +1,7 @@
 /**
  * Node
  */
-public class Node<T> {
+public class Node<T> implements Comparable<T> {
     private T data;
     private Node<T> next;
 
@@ -32,5 +32,17 @@ public class Node<T> {
     public String toString() {
         return "Node{" + "data=" + data + ", next=" + next + '}';
 
+    }
+
+    @Override
+    public int compareTo(T o) {
+        if (o instanceof String) {
+            String data = (String) this.getData();
+            if (data.compareTo((String) o) >= 0) {
+                return -1;
+            }
+
+        }
+        return 0;
     }
 }

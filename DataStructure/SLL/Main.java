@@ -1,13 +1,18 @@
 public class Main {
     public static void main(String[] args) {
         LinkedList<String> ll = new LinkedList<>();
-        ll.addNode("Saif");
-        ll.addNode("Saif1");
-        ll.addNode("Saif1");
-        ll.addNode("Saif1");
-        ll.addNode("Saif");
+        ll.addNode("Aaif");
+        ll.addNode("Baif1");
+        ll.addNode("Daif1");
+        ll.addNode("Eaif1");
+        ll.addNode("Faif");
         System.out.println(ll.printList());
-        ll.removeDuplicatesSame();
+        try {
+            ll.insertNOrder("Ehmad");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
         System.out.println(ll.printList());
     }
 }
