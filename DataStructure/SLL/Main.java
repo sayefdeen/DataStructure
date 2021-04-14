@@ -7,12 +7,7 @@ public class Main {
         ll.addNode("Eaif1");
         ll.addNode("Faif");
         System.out.println(ll.printList());
-        try {
-            ll.insertNOrder("Ehmad");
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
+        ll.insertNOrder("Ehmad");
         System.out.println(ll.printList());
     }
 }

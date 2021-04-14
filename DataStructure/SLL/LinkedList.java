@@ -222,10 +222,10 @@ public class LinkedList<T> {
     // the solution is correct, just change the if statment to handle your case
     // not the optimal solution since I am  using generics
 
-    public void insertNOrder(T data) throws Exception{
+    public void insertNOrder(T data){
         Node<T> newNode = new Node<>(data);
         if(head == null) {
-            throw  new Exception("The LinkedList is Empty");
+            head = newNode;
         }else if(head.compareTo(data) < 0){
             newNode.setNext(head);
             head = newNode;
