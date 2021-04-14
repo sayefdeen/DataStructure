@@ -39,10 +39,10 @@ public class Node<T> implements Comparable<T> {
         if (o instanceof String) {
             String data = (String) this.getData();
             if (data.compareTo((String) o) >= 0) {
-                return -1;
+                return 1;
             }
 
         }
-        return 0;
+        return -1;
     }
 }

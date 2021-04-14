@@ -226,19 +226,28 @@ public class LinkedList<T> {
         Node<T> newNode = new Node<>(data);
         if(head == null) {
             head = newNode;
-        }else if(head.compareTo(data) < 0){
-            newNode.setNext(head);
-            head = newNode;
+        }else if(head.compareTo(data) > 0){
+            newNode.setNext(head.getNext());
+            head.setNext(newNode);
         }
         else{
             Node<T> current = head;
             Node<T> next = head.getNext();
 
             while (next != null && current != null ){
-                if(current.compareTo(data) >= 0 && next.compareTo(data) <0){
-                    newNode.setNext(next);
-                    current.setNext(newNode);
-                    break;
+                if(current.compareTo(data) < 0 && next.compareTo(data) > 0){
+                    if(current.getData() == data){
+                        newNode.setNext(current.getNext());
+                        current.setNext(newNode);
+                        return;
+                    }else if(next.getData() == data){
+                        newNode.setNext(next.getNext());
+                        next.setNext(newNode);
+                        return;
+                    }
+                        newNode.setNext(next);
+                        current.setNext(newNode);
+                        break;
                 }
                 current = current.getNext();
                 next = next.getNext();

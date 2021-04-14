@@ -5,9 +5,9 @@ public class Main {
         ll.addNode("Baif1");
         ll.addNode("Daif1");
         ll.addNode("Eaif1");
-        ll.addNode("Faif");
+        ll.addNode("Faif1");
         System.out.println(ll.printList());
-        ll.insertNOrder("Ehmad");
+        ll.insertNOrder("Daif1");
         System.out.println(ll.printList());
     }
 }
