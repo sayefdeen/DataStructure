@@ -1,4 +1,4 @@
-package Java.SLL;
+package SLL;
 
 /**
  * Node

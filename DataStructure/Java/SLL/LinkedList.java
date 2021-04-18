@@ -1,8 +1,7 @@
-package Java.SLL;
+package SLL;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 
 /**
  * LinkedList
