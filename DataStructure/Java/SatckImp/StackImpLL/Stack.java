@@ -1,4 +1,4 @@
-package StackImpLL;
+package SatckImp.StackImpLL;
 
 public class Stack<T> {
 

@@ -1,4 +1,4 @@
-package StackImpLL;
+package SatckImp.StackImplArrays;
 
 public class Node<T> {
     T data;

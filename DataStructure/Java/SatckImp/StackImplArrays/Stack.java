@@ -1,4 +1,4 @@
-package StackImplArrays;
+package SatckImp.StackImplArrays;
 
 import java.util.ArrayList;
 
