@@ -1,3 +1,5 @@
+package Java.SLL;
+
 public class Main {
     public static void main(String[] args) {
         LinkedList<String> ll = new LinkedList<>();
