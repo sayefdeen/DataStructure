@@ -44,7 +44,11 @@ public class Node<T> implements Comparable<T> {
                 return 1;
             }
 
+        } else if(o instanceof Integer){
+            int data = (int) this.getData();
+            return data >= (int) o ? 1 : -1;
         }
+
         return -1;
     }
 }

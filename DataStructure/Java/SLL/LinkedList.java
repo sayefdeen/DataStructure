@@ -8,10 +8,14 @@ import java.util.HashSet;
  */
 public class LinkedList<T> {
 
-    private Node<T> head;
+    public Node<T> head;
 
     public Node<T> getHead() {
         return head;
+    }
+
+    public void setHead(Node<T> head) {
+        this.head = head;
     }
 
     public void addNode(T node) {
