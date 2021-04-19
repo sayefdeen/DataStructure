@@ -1,4 +1,4 @@
-package Problems.SLL;
+package HackerRank.SLL;
 
 public class RemoveDuplicate {
 

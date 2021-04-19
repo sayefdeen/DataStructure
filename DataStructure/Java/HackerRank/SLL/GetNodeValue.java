@@ -1,4 +1,4 @@
-package Problems.SLL;
+package HackerRank.SLL;
 
 // This is a Problem from hacker rank name Get Node Value
 

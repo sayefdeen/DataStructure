@@ -1,4 +1,4 @@
-package Problems.SLL;
+package HackerRank.SLL;
 
 import SLL.LinkedList;
 import SLL.Node;
