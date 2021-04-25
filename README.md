@@ -2,8 +2,7 @@
 
 Revision and solving some problems for DataStructure
 
-| Data Structure  | Link   |   
+| Web Site  | Link   |   
 |---|---|
-| Single Linked List  | [linked List](https://github.com/sayefdeen/DataStructure/tree/main/DataStructure/SLL)   |   
-|   |   |
-|   |   |
+| LeeTCode  | [Profile](https://leetcode.com/user7646j/)   |   
+| HackerRank  | [Profile](https://www.hackerrank.com/sayefdeen_Rawad)  |
