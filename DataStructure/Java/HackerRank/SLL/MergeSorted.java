@@ -3,7 +3,7 @@ package HackerRank.SLL;
 import SLL.LinkedList;
 import SLL.Node;
 
-public class Prob {
+public class MergeSorted {
     public static void main(String[] args) {
         LinkedList<Integer> sll1 = new LinkedList<>();
         LinkedList<Integer> sll2 = new LinkedList<>();
