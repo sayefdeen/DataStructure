@@ -10,6 +10,6 @@
 |Q.6   |[Inter section](https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem)   |   |Merge two sorted linked lists|
 |Q.7   |[Reverse DLL](https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem)   |   |Reverse A Double LinkedList|
 
-<img src="../images/LinkedLists.PNG"
+<img src="../../images/LinkedLists.PNG"
 alt="LinkedList Complete Questions"
 style="margin-right: 10px; width: 100%" />
