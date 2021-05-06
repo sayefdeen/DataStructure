@@ -14,3 +14,4 @@
 |Q.1669   |[1669](https://leetcode.com/problems/merge-in-between-linked-lists/)   |   |Merge In Between Linked Lists|
 |Q.1721   |[1721](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)   |   |Swapping Nodes in a Linked List|
 |Q.1019   |[1019](https://leetcode.com/problems/next-greater-node-in-linked-list/)   |   |Next Greater Node In Linked List|
+|Q.142   |[142](https://leetcode.com/problems/linked-list-cycle-ii/)   |   |Linked List Cycle II|
